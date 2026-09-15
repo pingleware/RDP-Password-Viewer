@@ -1,0 +1,12 @@
+# 导出的凭据文件 (可能含明文密码)
+*.csv
+
+# 系统垃圾
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
