@@ -14,7 +14,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-![screenshot](docs/screenshot.png)
+![screenshot-en](docs/screenshot-en.png)
 
 *Demo data shown — TEST-NET reserved IPs, no real credentials.*
 
@@ -52,15 +52,15 @@ That's what this tool solves. It digs the password back out of:
 > Use this **only on your own computer** to recover **your own** saved credentials.
 
 1. Download / clone this repo
-2. Double-click **`Launch.bat`**
+2. Double-click **`Launch-en.bat`**
 3. Done. If domain credentials show 🔒, type your **Windows logon password** (not your PIN) and rescan
 
 <details>
 <summary>🖥️ Command-line mode</summary>
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File RDP_Password_Viewer.ps1 -NoGui
-powershell -ExecutionPolicy Bypass -File RDP_Password_Viewer.ps1 -NoGui -LoginPassword "your-win-password"
+powershell -ExecutionPolicy Bypass -File RDP_Password_Viewer-en.ps1 -NoGui
+powershell -ExecutionPolicy Bypass -File RDP_Password_Viewer-en.ps1 -NoGui -LoginPassword "your-win-password"
 ```
 
 </details>
