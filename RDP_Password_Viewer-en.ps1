@@ -3,7 +3,7 @@
 #  - Scan for Remote Desktop (RDP) server addresses and passwords saved on the local machine.
 #  - Credential Manager / Credentials Files / .rdp Files / Connection History
 #  - Runs entirely locally with zero external dependencies (uses system bcrypt.dll for encryption).
-#  Usage: Double-click "启动.bat" or run `powershell -File <this_file> [-NoGui]`
+#  Usage: Double-click "Launch.bat"|"Launch-en.bat" or run `powershell -File <this_file> [-NoGui]`
 # ============================================================
 param(
     [switch]$NoGui,
@@ -856,9 +856,9 @@ if ($NoGui) {
     $pretty = $rows | ForEach-Object {
         $icon = switch ($_.Status) { 'OK' {'[Decryption Successful]'} 'LOCK' {'[Password Required]'} 'HIST' {'[History Only]'} default {'[No Password]'} }
         [PSCustomObject]@{
-            服务器 = $_.Server; 用户名 = $_.Username
-            密码 = if ($_.Status -eq 'OK') { $_.Password } else { '-' }
-            状态 = $icon; 保存时间 = $_.SavedAt; 来源 = $_.Source
+            server = $_.Server; username = $_.Username
+            password = if ($_.Status -eq 'OK') { $_.Password } else { '-' }
+            state = $icon; retention_period = $_.SavedAt; source = $_.Source 
         }
     }
     $pretty | Format-Table -AutoSize | Out-String -Width 200
