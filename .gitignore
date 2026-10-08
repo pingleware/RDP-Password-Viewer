@@ -1,12 +1,15 @@
-# 导出的凭据文件 (可能含明文密码)
+# 导出的凭据文件 (可能含明文密码) => Exported credential file (may contain plaintext passwords)
 *.csv
 
-# 系统垃圾
+# 系统垃圾 => System junk
 Thumbs.db
 Desktop.ini
 .DS_Store
 
-# 编辑器
+# 编辑器 => Editor
 .vscode/
 .idea/
 *.swp
+
+# Distribution => 分配
+dist/
